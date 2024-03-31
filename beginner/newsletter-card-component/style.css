@@ -1,0 +1,110 @@
+/* BASE */
+
+:root {
+  --clr-blue: #111827;
+  --clr-gray: #374151;
+  --clr-white: #fff;
+  --clr-lavander: #b3b8d8;
+  --clr-off-white: #fafaff;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font: inherit;
+}
+
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.5rem rgba(179, 184, 217, 0.5);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.4rem;
+  color: var(--clr-blue);
+  background-color: var(--clr-lavander);
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* TYPOGRAPHY */
+
+.heading--primary {
+  font-family: "Merriweather", serif;
+  font-weight: bold;
+  font-size: 4rem;
+}
+
+/* UTILITIES */
+
+.u-container {
+  max-width: 109.4rem;
+  margin: 0 auto;
+}
+
+.u-margin-bottom-sm {
+  margin-bottom: 1.2rem;
+}
+
+.u-margin-bottom-md {
+  margin-bottom: 2.4rem;
+}
+
+.u-text-center {
+  text-align: center;
+}
+
+/* NEWSLETTER */
+
+.newsletter {
+  background-color: var(--clr-white);
+  border-radius: 16px;
+  padding: 7.4rem;
+}
+
+/* FORM */
+
+.form {
+  display: flex;
+  justify-content: center;
+  gap: 2.4rem;
+}
+
+.form__input {
+  padding: 1.6rem 3.2rem;
+  border-radius: 8px;
+  border: 1px solid var(--clr-lavander);
+  background-color: var(--clr-off-white);
+  color: var(--clr-lavander);
+}
+
+.form__input::placeholder {
+  color: var(--clr-lavander);
+}
+
+/* CHECKBOX*/
+
+.checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.6rem;
+}
+
+.checkbox__label {
+  display: block;
+  font-size: 1.4rem;
+  text-align: left;
+}
