@@ -23,7 +23,7 @@
             Sign up for our free newsletter to receive weekly coding challenges
             that will help you improve your frontend development skills.
           </p>
-          <form action="#" class="form">
+          <form action="#" class="form" autocomplete="off">
             <div class="form__input-group u-margin-bottom-sm">
               <input
                 type="email"
@@ -32,22 +32,24 @@
               />
               <button type="submit" class="btn--solid">Subscribe</button>
             </div>
-            <div class="form__checkbox">
+            <label for="checkbox__input" class="form__label">
               <input
                 type="checkbox"
                 id="checkbox__input"
                 class="checkbox__input"
               />
-              <label for="checkbox__input" class="form__label"
-                >By checking this box, you agree to receive our weekly
-                newsletter containing coding challenges, tips, and other related
-                content. You may unsubscribe from the newsletter at any
-                time</label
-              >
-            </div>
+              <span class="checkmark"></span>
+              <span>
+                By checking this box, you agree to receive our weekly newsletter
+                containing coding challenges, tips, and other related content.
+                You may unsubscribe from the newsletter at any time
+              </span>
+            </label>
           </form>
         </div>
       </section>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
   </body>
 </html>
