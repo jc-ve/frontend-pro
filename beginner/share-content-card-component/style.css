@@ -1,0 +1,156 @@
+/* BASE */
+:root {
+  --clr-brown: #1e1411;
+  --clr-brown-200: #c5aea7;
+  --clr-brown-100: #dacdc9;
+  --clr-cream: #ede9e2;
+  --clr-gray: #d9d9d9;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font: inherit;
+}
+
+::selection {
+  color: var(--clr-cream);
+  background-color: var(--clr-brown);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+@media screen and (max-width: 50em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media screen and (max-width: 31.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Mulish", sans-serif;
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: var(--clr-brown);
+  background-color: var(--clr-brown-100);
+}
+
+/* TYPOGRAPHY */
+
+.heading--primary {
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 31.25em) {
+  .heading--primary {
+    font-size: 2.8rem;
+  }
+}
+
+/* UTILITIES */
+
+.u-margin-bottom-sm {
+  margin-bottom: 1.7rem;
+}
+
+.u-margin-bottom-md {
+  margin-bottom: 3.2rem;
+}
+
+/* FIGURE */
+
+.share {
+  max-width: 84rem;
+  padding: 6.8rem;
+  background-color: var(--clr-cream);
+  border-radius: 40px;
+  box-shadow: 1.2rem 1.2rem var(--clr-brown-200);
+}
+
+.share__list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3.6rem;
+}
+
+@media screen and (max-width: 50em) {
+  .share__list {
+    gap: 3rem;
+  }
+}
+/* BUTTON */
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  background-color: var(--clr-gray);
+  padding: 2.2rem;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.btn:hover,
+.btn:active {
+  box-shadow: 0 0 0 1px inset var(--clr-brown);
+}
+
+/* INPUT GROUP */
+
+.input-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.4rem;
+  font-size: 1.6rem;
+  border-radius: 12px;
+  padding: 1.8rem;
+  background-color: var(--clr-gray);
+  cursor: pointer;
+}
+
+.input {
+  width: 100%;
+  color: var(--clr-brown);
+  background-color: var(--clr-gray);
+  cursor: pointer;
+  border: none;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.input-group span {
+  font-weight: 700;
+}
+
+.position-relative {
+  position: relative;
+}
