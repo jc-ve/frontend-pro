@@ -2,9 +2,11 @@
 
 :root {
   --clr-blue: #111827;
+  --clr-blue-light: #292f3d;
   --clr-gray: #374151;
   --clr-white: #fff;
   --clr-lavander: #b3b8d8;
+  --clr-lavander-light: #e6e9fb;
   --clr-off-white: #fafaff;
 }
 
@@ -19,18 +21,42 @@
 
 *:focus {
   outline: none;
-  box-shadow: 0 0 0 0.5rem rgba(179, 184, 217, 0.5);
+  box-shadow: 0 0 0 0.3rem rgba(179, 184, 217, 0.5);
+}
+
+::selection {
+  color: var(--clr-white);
+  background-color: var(--clr-blue);
 }
 
 html {
   font-size: 62.5%;
 }
 
+@media screen and (max-width: 56.25em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media screen and (max-width: 43.75em) {
+  html {
+    font-size: 50%;
+  }
+}
+
 body {
+  box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   font-size: 2.4rem;
-  color: var(--clr-blue);
-  background-color: var(--clr-lavander);
+  color: var(--clr-gray);
+  background-color: var(--clr-lavander-light);
+}
+
+@media screen and (max-width: 56.25em) {
+  body {
+    font-size: 1.8rem;
+  }
 }
 
 main {
@@ -38,6 +64,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 2rem;
 }
 
 /* TYPOGRAPHY */
@@ -46,6 +73,18 @@ main {
   font-family: "Merriweather", serif;
   font-weight: bold;
   font-size: 4rem;
+}
+
+@media screen and (max-width: 56.25em) {
+  .heading--primary {
+    font-size: 3.6rem;
+  }
+}
+
+@media screen and (max-width: 31.25em) {
+  .heading--primary {
+    font-size: 3rem;
+  }
 }
 
 /* UTILITIES */
@@ -73,14 +112,32 @@ main {
   background-color: var(--clr-white);
   border-radius: 16px;
   padding: 7.4rem;
+  box-shadow: 1rem 1rem rgba(255, 255, 255, 0.4);
+}
+
+@media screen and (max-width: 56.25em) {
+  .newsletter {
+    padding: 6.4rem;
+  }
+}
+
+@media screen and (max-width: 43.75em) {
+  .newsletter {
+    padding: 5.2rem;
+  }
 }
 
 /* FORM */
 
 .form {
+  max-width: 81.4rem;
+  margin: 0 auto;
+}
+
+.form__input-group {
   display: flex;
-  justify-content: center;
   gap: 2.4rem;
+  justify-content: center;
 }
 
 .form__input {
@@ -88,23 +145,50 @@ main {
   border-radius: 8px;
   border: 1px solid var(--clr-lavander);
   background-color: var(--clr-off-white);
-  color: var(--clr-lavander);
+  color: var(--clr-blue);
+  width: 100%;
 }
 
 .form__input::placeholder {
   color: var(--clr-lavander);
 }
 
-/* CHECKBOX*/
-
-.checkbox {
+.form__checkbox {
   display: flex;
   align-items: flex-start;
   gap: 1.6rem;
 }
 
-.checkbox__label {
+.form__label {
   display: block;
   font-size: 1.4rem;
   text-align: left;
+  color: var(--clr-blue);
+}
+
+@media screen and (max-width: 31.25em) {
+  .form__input-group {
+    flex-direction: column;
+  }
+
+  .form__label {
+    font-size: 1.2rem;
+  }
+}
+
+/* BUTTON */
+
+.btn--solid {
+  font-weight: 500;
+  color: var(--clr-white);
+  background-color: var(--clr-blue);
+  padding: 1.6rem 3.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn--solid:hover {
+  background-color: var(--clr-blue-light);
 }

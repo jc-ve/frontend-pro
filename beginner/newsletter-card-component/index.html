@@ -23,26 +23,29 @@
             Sign up for our free newsletter to receive weekly coding challenges
             that will help you improve your frontend development skills.
           </p>
-          <form action="#" class="form u-margin-bottom-sm">
-            <input
-              type="email"
-              class="form__input"
-              placeholder="Enter your email address"
-            />
-            <button type="submit" class="btn--solid">Subscribe</button>
+          <form action="#" class="form">
+            <div class="form__input-group u-margin-bottom-sm">
+              <input
+                type="email"
+                class="form__input"
+                placeholder="Enter your email address"
+              />
+              <button type="submit" class="btn--solid">Subscribe</button>
+            </div>
+            <div class="form__checkbox">
+              <input
+                type="checkbox"
+                id="checkbox__input"
+                class="checkbox__input"
+              />
+              <label for="checkbox__input" class="form__label"
+                >By checking this box, you agree to receive our weekly
+                newsletter containing coding challenges, tips, and other related
+                content. You may unsubscribe from the newsletter at any
+                time</label
+              >
+            </div>
           </form>
-          <div class="checkbox">
-            <input
-              type="checkbox"
-              id="checkbox__input"
-              class="checkbox__input"
-            />
-            <label for="checkbox__input" class="checkbox__label"
-              >By checking this box, you agree to receive our weekly newsletter
-              containing coding challenges, tips, and other related content. You
-              may unsubscribe from the newsletter at any time</label
-            >
-          </div>
         </div>
       </section>
     </main>
