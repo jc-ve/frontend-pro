@@ -84,6 +84,7 @@ body {
 /* FIGURE */
 
 .share {
+  position: relative;
   max-width: 84rem;
   padding: 6.8rem;
   background-color: var(--clr-cream);
@@ -100,7 +101,7 @@ body {
 
 @media screen and (max-width: 50em) {
   .share__list {
-    gap: 3rem;
+    gap: 2.4rem;
   }
 }
 /* BUTTON */
@@ -119,6 +120,23 @@ body {
 .btn:hover,
 .btn:active {
   box-shadow: 0 0 0 1px inset var(--clr-brown);
+}
+
+.btn__logo {
+  height: 3.8rem;
+  width: 3.8rem;
+}
+
+@media screen and (max-width: 31.25em) {
+  .btn:link,
+  .btn:visited {
+    padding: 1.6rem;
+  }
+
+  .btn__logo {
+    height: 3rem;
+    width: 3rem;
+  }
 }
 
 /* INPUT GROUP */
@@ -151,6 +169,10 @@ body {
   font-weight: 700;
 }
 
-.position-relative {
-  position: relative;
+/* SWAL */
+
+body.swal2-toast-shown .swal2-container.swal2-top-end.position-absolute {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
 }
