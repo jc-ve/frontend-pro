@@ -7,6 +7,7 @@
   --clr-cyan-dark: #9dd9dd;
   --clr-yellow: #ffddb6;
   --clr-yellow-dark: #e6c7a4;
+  --clr-white: #fff;
 }
 
 *,
@@ -22,17 +23,46 @@ html {
   font-size: 62.5%;
 }
 
+@media screen and (max-width: 59.375em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media screen and (max-width: 50em) {
+  html {
+    font-size: 50%;
+  }
+}
+
 main {
   min-height: 100vh;
   display: grid;
   place-items: center;
   padding: 2rem;
+  background-image: url(images/ellipse-pink.png), url(images/ellipse-blue.png),
+    url(images/ellipse-yellow.png);
+  background-position: left -19.6rem bottom -11.6rem, top 1.8rem center,
+    right -11rem top 16.9rem;
+  background-repeat: no-repeat;
 }
 
 body {
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   font-size: 2.4rem;
+  color: var(--clr-blue);
+}
+
+@media screen and (max-width: 50em) {
+  body {
+    font-size: 2rem;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
 }
 
 /* UTILITIES */
@@ -55,6 +85,12 @@ body {
   font-family: "Merriweather", serif;
   font-weight: 700;
   font-size: 3.2rem;
+}
+
+@media screen and (max-width: 50em) {
+  .heading--primary {
+    font-size: 2.8rem;
+  }
 }
 
 .paragraph--light {
@@ -100,6 +136,14 @@ body {
   background-color: var(--clr-yellow-dark);
 }
 
+@media screen and (max-width: 50em) {
+  .btn,
+  .btn:link,
+  .btn:visited {
+    font-size: 1.6rem;
+  }
+}
+
 /* PROFILE */
 
 .profile {
@@ -109,12 +153,45 @@ body {
   max-width: 109.8rem;
   margin: 0 auto;
   border-radius: 30px;
+  padding: 4.2rem 3.7rem 8.7rem 12.1rem;
+  box-shadow: 0 0 0 20px inset var(--clr-white);
 }
+
+@media screen and (max-width: 59.375em) {
+  .profile {
+    padding: 4.2rem;
+  }
+}
+
+@media screen and (max-width: 50em) {
+  .profile {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 0 0 10px inset var(--clr-white);
+  }
+}
+
+.profile__img {
+  height: 25rem;
+  width: 25rem;
+}
+
+/* .profile__details {
+  padding-top: 8.6rem;
+} */
 
 .profile__stats {
   display: flex;
   list-style: none;
   gap: 4.5rem;
+}
+
+@media screen and (max-width: 50em) {
+  .profile__stats,
+  .profile__ctas {
+    justify-content: center;
+  }
 }
 
 .profile__item > span {
@@ -127,6 +204,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+@media screen and (max-width: 50em) {
+  .profile__item {
+    font-size: 1.6rem;
+  }
 }
 
 .profile__item:not(:last-of-type) {
