@@ -21,20 +21,110 @@
         <button class="btn--close" id="btn-close">
           <img src="images/close-icon.png" alt="Close icon" />
         </button>
-        <h1 class="heading--primary u-text-center u-margin-bottom-lg">
+        <h1 class="heading heading--primary u-text-center u-margin-bottom-lg">
           How likely are you to recommend FrontendPro to someone you know?
         </h1>
         <div class="modal__scores u-margin-bottom-sm" id="modal-scores">
-          <span class="modal__score">1</span>
-          <span class="modal__score">2</span>
-          <span class="modal__score">3</span>
-          <span class="modal__score">4</span>
-          <span class="modal__score">5</span>
-          <span class="modal__score">6</span>
-          <span class="modal__score">7</span>
-          <span class="modal__score">8</span>
-          <span class="modal__score">9</span>
-          <span class="modal__score">10</span>
+          <div class="modal__input-group">
+            <input
+              type="radio"
+              name="modal__score"
+              id="1"
+              value="1"
+              class="modal__input"
+            />
+            <label for="1" class="modal__input-label">1</label>
+          </div>
+          <div class="modal__input-group">
+            <input
+              type="radio"
+              name="modal__score"
+              id="2"
+              value="2"
+              class="modal__input"
+            />
+            <label for="2" class="modal__input-label">2</label>
+          </div>
+          <div class="modal__input-group">
+            <input
+              type="radio"
+              name="modal__score"
+              id="3"
+              value="3"
+              class="modal__input"
+            />
+            <label for="3" class="modal__input-label">3</label>
+          </div>
+          <div class="modal__input-group">
+            <input
+              type="radio"
+              name="modal__score"
+              id="4"
+              value="4"
+              class="modal__input"
+            />
+            <label for="4" class="modal__input-label">4</label>
+          </div>
+          <div class="modal__input-group">
+            <input
+              type="radio"
+              name="modal__score"
+              id="5"
+              value="5"
+              class="modal__input"
+            />
+            <label for="5" class="modal__input-label">5</label>
+          </div>
+          <div class="modal__input-group">
+            <input
+              type="radio"
+              name="modal__score"
+              id="6"
+              value="6"
+              class="modal__input"
+            />
+            <label for="6" class="modal__input-label">6</label>
+          </div>
+          <div class="modal__input-group">
+            <input
+              type="radio"
+              name="modal__score"
+              id="7"
+              value="7"
+              class="modal__input"
+            />
+            <label for="7" class="modal__input-label">7</label>
+          </div>
+          <div class="modal__input-group">
+            <input
+              type="radio"
+              name="modal__score"
+              id="8"
+              value="8"
+              class="modal__input"
+            />
+            <label for="8" class="modal__input-label">8</label>
+          </div>
+          <div class="modal__input-group">
+            <input
+              type="radio"
+              name="modal__score"
+              id="9"
+              value="9"
+              class="modal__input"
+            />
+            <label for="9" class="modal__input-label">9</label>
+          </div>
+          <div class="modal__input-group">
+            <input
+              type="radio"
+              name="modal__score"
+              id="10"
+              value="10"
+              class="modal__input"
+            />
+            <label for="10" class="modal__input-label">10</label>
+          </div>
         </div>
         <div class="modal__caption u-margin-bottom-lg">
           <p>Not likely at all</p>
@@ -42,9 +132,24 @@
         </div>
         <div class="modal__controls">
           <button class="btn btn--outline" id="btn-cancel">Cancel</button>
-          <button class="btn btn--solid" id="btn-submit">Submit</button>
+          <button class="btn btn--solid" id="btn-submit" type="submit">
+            Submit
+          </button>
         </div>
       </form>
+
+      <div class="message" id="message">
+        <h2 class="heading heading--secondary u-margin-bottom-sm">
+          Thank you for your feedback!
+        </h2>
+        <p class="message__score">
+          You selected <span id="score"></span> out of 10
+        </p>
+        <p>
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don't hesitate to get in touch!
+        </p>
+      </div>
     </main>
     <script src="script.js"></script>
   </body>

@@ -52,10 +52,17 @@ main {
 
 /* TYPOGRAPHY */
 
-.heading--primary {
+.heading {
   font-family: "Merriweather", serif;
   font-weight: 700;
+}
+
+.heading--primary {
   font-size: 3.6rem;
+}
+
+.heading--secondary {
+  font-size: 3rem;
 }
 
 @media screen and (max-width: 46.875em) {
@@ -151,7 +158,16 @@ main {
   gap: 2.4rem;
 }
 
-.modal__score {
+.modal__input {
+  display: none;
+}
+
+.modal__input:checked + .modal__input-label {
+  font-weight: 700;
+  border-color: var(--clr-lavender);
+}
+
+.modal__input-label {
   display: inline-block;
   font-size: 2.8rem;
   color: var(--clr-lavender);
@@ -167,14 +183,14 @@ main {
 }
 
 @media screen and (max-width: 25em) {
-  .modal__score {
+  .modal__input-label {
     font-size: 1.8rem;
     height: 4rem;
     width: 4rem;
   }
 }
 
-.modal__score:hover {
+.modal__input-label:hover {
   border-color: var(--clr-lavender);
 }
 
@@ -201,4 +217,29 @@ main {
   visibility: hidden;
   transform: scale(0);
   pointer-events: none;
+  display: none;
+}
+
+.message {
+  color: var(--clr-off-white);
+  text-align: center;
+  border-radius: 20px;
+  padding: 5.2rem;
+  background-color: var(--clr-indigo);
+  max-width: 60rem;
+  z-index: 1;
+  display: none;
+}
+
+.message__score {
+  display: inline-block;
+  font-size: 1.2rem;
+  margin-bottom: 2.4rem;
+  padding: 1.6rem;
+  border-radius: 100px;
+  background-color: var(--clr-off-indigo);
+}
+
+.message.active {
+  display: block;
 }
