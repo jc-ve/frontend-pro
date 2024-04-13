@@ -114,6 +114,13 @@ main {
   border-color: var(--clr-green);
 }
 
+.faq__question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.4rem;
+}
+
 .faq__answer {
   display: none;
 }
@@ -124,4 +131,8 @@ main {
 
 .faq__item.active .faq__answer {
   display: block;
+}
+
+.faq__item.active .faq__icon {
+  transform: rotate(45deg);
 }
