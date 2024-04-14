@@ -14,7 +14,11 @@
   </head>
   <body>
     <main>
-      <form action="" class="form">
+      <form
+        action="https://api.web3forms.com/submit"
+        method="POST"
+        class="form"
+      >
         <header>
           <h1 class="heading--primary u-margin-bottom-md">Send me a message</h1>
           <p>
@@ -24,32 +28,37 @@
           </p>
         </header>
         <input
+          type="hidden"
+          name="access_key"
+          value="df9a8392-0c24-4495-a136-314fd2e9bbed"
+        />
+        <input
           type="text"
-          name=""
-          id=""
+          name="name"
           class="form__input"
           placeholder="Name"
+          required
         />
         <input
           type="email"
-          name=""
-          id=""
+          name="email"
           class="form__input"
           placeholder="Email address"
+          required
         />
         <input
           type="text"
-          name=""
-          id=""
+          name="subject"
           class="form__input"
           placeholder="Subject"
+          required
         />
         <textarea
-          name=""
-          id=""
+          name="message"
           row="10"
           class="form__input"
           placeholder="Message"
+          required
         ></textarea>
         <button type="submit" class="btn--solid">Send</button>
       </form>

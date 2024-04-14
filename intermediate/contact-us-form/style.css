@@ -26,6 +26,12 @@ html {
   font-size: 62.5%;
 }
 
+@media screen and (max-width: 37.5em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
 main {
   min-height: 100vh;
   display: grid;
