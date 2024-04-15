@@ -51,19 +51,6 @@ window.addEventListener("scroll", watchScroll);
 btnScroll.addEventListener("click", scrollToTop);
 
 // Display Projects
-const getProject = () => {
-  fetch("https://cdn.jsdelivr.net/gh/jc-ve/projects-data@latest/codewell.json")
-    .then((res) => res.json())
-    .then((data) => {
-      displayProjects(data);
-    })
-    .catch((err) => {
-      containerProject.innerHTML = `<p>No data retrieved. ${err}</p>`;
-    });
-};
-
-getProject();
-
 const displayProjects = (projects) => {
   projects.forEach(({ title, projLink, codeLink, imgLink, skills }) => {
     let skillsContainer = [];
@@ -102,7 +89,22 @@ const displayProjects = (projects) => {
     containerProject.insertAdjacentHTML("beforeend", html);
   });
 };
-displayProjects();
+
+const getProject = () => {
+  fetch(
+    "https://cdn.jsdelivr.net/gh/jc-ve/projects-data@latest/frontend-pro.json"
+  )
+    .then((res) => res.json())
+    .then((data) => {
+      displayProjects(data);
+    })
+    .catch((err) => {
+      containerProject.innerHTML = `<p>No data retrieved. ${err}</p>`;
+    });
+};
+
+getProject();
+
 // Setting year
 const currentYear = new Date().getFullYear();
 year.textContent = currentYear;
