@@ -1,0 +1,54 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+*:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.3rem lighten($clr-green, 10%);
+}
+
+::selection {
+  background-color: $clr-green;
+  color: $clr-white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: $clr-white;
+  color: $clr-black;
+  transition: all 0.3s;
+}
+
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: $clr-green;
+}
+
+.section {
+  position: relative;
+}
+
+.dark-mode {
+  background-color: $clr-black;
+  color: $clr-white;
+}
+
+.dark-mode .card {
+  background-color: $clr-black-light;
+  border: 1px solid transparent;
+}
