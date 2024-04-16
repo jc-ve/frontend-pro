@@ -1,0 +1,133 @@
+:root {
+  --clr-green: #45a69a;
+  --clr-purple: #4d46a5;
+  --clr-purple-light: #5f59ae;
+  --clr-black: #000;
+  --clr-black-light: rgba(0, 0, 0, 0.8);
+  --clr-white: #fff;
+  --clr-gray: #5b5b5e;
+  --clr-gray-light: #e3e3e3;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+}
+
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+  background-color: var(--clr-purple);
+}
+
+/* PRICING */
+
+.pricing {
+  max-width: 64rem;
+  background-color: var(--clr-white);
+  padding: 7.8rem 5.2rem 10.2rem;
+  border-radius: 20px;
+}
+
+.pricing__plan {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7rem;
+  padding: 1.4rem 5.1rem;
+  border: 1px solid var(--clr-gray-light);
+  border-radius: 20px;
+  margin-bottom: 6.3rem;
+}
+
+.pricing__item {
+  font-weight: 500;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.pricing__item:hover {
+  color: var(--clr-green);
+}
+
+.pricing__item.active {
+  background-color: var(--clr-green);
+  color: var(--clr-white);
+  padding: 2.6rem 5.2rem;
+  border-radius: 20px;
+  box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.1);
+}
+
+.pricing__body {
+  padding: 0 10rem;
+}
+
+.pricing__type {
+  font-weight: 700;
+  color: var(--clr-gray);
+  text-transform: uppercase;
+  margin-bottom: 1.4rem;
+}
+
+.pricing__price {
+  font-weight: 700;
+  font-size: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3.5rem;
+}
+
+.pricing__caption {
+  font-weight: 700;
+  color: var(--clr-black-light);
+  letter-spacing: 2%;
+  line-height: 1.4;
+  margin-bottom: 2.4rem;
+}
+
+.pricing__features {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-bottom: 6.6rem;
+}
+
+.pricing__feature {
+  list-style-image: url("images/checkmark.svg");
+}
+
+.pricing__btn {
+  width: 100%;
+  font-weight: 500;
+  color: var(--clr-white);
+  background-color: var(--clr-purple);
+  padding: 2.6rem;
+  border: none;
+  border-radius: 100px;
+  box-shadow: 0 0.8rem 0.8rem rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pricing__btn:hover {
+  background-color: var(--clr-purple-light);
+  transform: translateY(-0.5rem);
+}
