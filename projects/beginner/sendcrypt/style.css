@@ -1,0 +1,143 @@
+:root {
+  --clr-white: #fff;
+  --clr-black: #16171d;
+  --clr-gray: #787a8d;
+  --clr-yellow: #f5c249;
+  --clr-yellow-dark: rgba(245, 194, 73, 0.7);
+}
+
+/* BASE */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  background-color: var(--clr-black);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* TYPOGRAPHY */
+
+.heading {
+  font-weight: 700;
+  color: var(--clr-white);
+}
+
+.heading--primary {
+  font-size: 4.4rem;
+}
+
+.paragraph {
+  color: var(--clr-gray);
+}
+
+/* UTILITES */
+
+.u-container {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.u-color-yellow {
+  color: var(--clr-yellow);
+}
+
+.u-margin-bottom-sm {
+  margin-bottom: 1.6rem;
+}
+
+.u-margin-bottom-lg {
+  margin-bottom: 5.6rem;
+}
+
+/* LAYOUT */
+
+.grid {
+  display: grid;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+
+/* HEADER */
+
+.header {
+  padding: 2.4rem 0;
+}
+
+/* NAVIGATION */
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 5.6rem;
+}
+
+.navigation__brand:link,
+.navigation__brand:visited {
+  font-weight: 600;
+  font-size: 3.2rem;
+  text-decoration: none;
+  color: var(--clr-white);
+}
+
+.navigation__list {
+  list-style: none;
+  display: flex;
+  gap: 3.2rem;
+  margin-right: auto;
+}
+
+.navigation__link:link,
+.navigation__link:visited {
+  color: var(--clr-gray);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navigation__link:hover,
+.navigation__link:active {
+  color: var(--clr-yellow);
+}
+
+/* BUTTONS */
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 1.8rem;
+  text-decoration: none;
+  padding: 1.2rem 2rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.btn--primary:link,
+.btn--primary:visited {
+  background-color: var(--clr-yellow);
+  color: var(--clr-black);
+}
+
+.btn--primary:hover,
+.btn--primary:active {
+  background-color: var(--clr-yellow-dark);
+}
