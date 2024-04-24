@@ -26,9 +26,15 @@ html {
   font-size: 62.5%;
 }
 
-@media screen and (max-width: 37.5em) {
+@media screen and (max-width: 46.875em) {
   html {
     font-size: 56.25%;
+  }
+}
+
+@media screen and (max-width: 31.25em) {
+  html {
+    font-size: 50%;
   }
 }
 
@@ -67,6 +73,7 @@ body {
 
 .form {
   max-width: 60.7rem;
+  margin: 0 auto;
   text-align: center;
   background-color: var(--clr-white);
   padding: 9rem 3.4rem 8.2rem;
@@ -118,4 +125,18 @@ textarea.form__input {
     rgba(98, 178, 255, 0.8),
     rgba(109, 156, 255, 0.8)
   );
+}
+
+@media screen and (max-width: 31.25em) {
+  .form {
+    padding: 6rem 3rem 5.2rem;
+  }
+
+  .form__input {
+    width: 100%;
+  }
+
+  .btn--solid {
+    width: 100%;
+  }
 }
