@@ -22,6 +22,18 @@ html {
   font-size: 62.5%;
 }
 
+@media screen and (max-width: 46.875em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media screen and (max-width: 34.375em) {
+  html {
+    font-size: 50%;
+  }
+}
+
 body {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
@@ -45,6 +57,12 @@ main {
   border-radius: 20px;
 }
 
+@media screen and (max-width: 34.375em) {
+  .pricing {
+    padding: 6.1rem 1rem 15.1rem;
+  }
+}
+
 .pricing__plan {
   list-style: none;
   display: flex;
@@ -55,6 +73,19 @@ main {
   border: 1px solid var(--clr-gray-light);
   border-radius: 20px;
   margin-bottom: 6.3rem;
+}
+
+@media screen and (max-width: 46.875em) {
+  .pricing__plan {
+    gap: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 34.375em) {
+  .pricing__plan {
+    padding: 0.8rem 3rem;
+    margin-bottom: 5.2rem;
+  }
 }
 
 .pricing__item {
@@ -76,7 +107,14 @@ main {
 }
 
 .pricing__body {
-  padding: 0 10rem;
+  max-width: 41.7rem;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 34.375em) {
+  .pricing__body {
+    max-width: 29.8rem;
+  }
 }
 
 .pricing__type {
