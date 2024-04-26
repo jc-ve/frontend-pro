@@ -58,11 +58,11 @@ main {
   border-radius: 20px;
 }
 
-/* @media screen and (max-width: 34.375em) {
+@media screen and (max-width: 25em) {
   .pricing {
     padding: 6.1rem 1rem 15.1rem;
   }
-} */
+}
 
 .pricing__plan {
   list-style: none;
@@ -81,12 +81,12 @@ main {
   }
 }
 
-/* @media screen and (max-width: 34.375em) {
+@media screen and (max-width: 25em) {
   .pricing__plan {
     padding: 0.8rem 3rem;
     margin-bottom: 5.2rem;
   }
-} */
+}
 
 .pricing__item {
   font-weight: 500;
@@ -120,14 +120,26 @@ main {
 .pricing__body {
   max-width: 41.7rem;
   margin: 0 auto;
+  display: none;
 }
 
-/* @media screen and (max-width: 34.375em) {
+.pricing__body.active {
+  display: block;
+}
+
+@media screen and (max-width: 40.625em) {
+  .pricing__body {
+    max-width: 100%;
+    /* padding: 0 4.1rem; */
+  }
+}
+
+@media screen and (max-width: 25em) {
   .pricing__body {
     max-width: 100%;
     padding: 0 4.1rem;
   }
-} */
+}
 
 .pricing__type {
   font-weight: 700;
@@ -167,13 +179,21 @@ main {
   gap: 1.4rem;
 }
 
+.pricing__feature--included::before {
+  background: url(./images/checkmark.svg);
+}
+
+.pricing__feature--not-included::before {
+  background: url(./images/xmark.svg);
+}
+
 .pricing__feature::before {
   display: block;
   content: "";
-  background: url(./images/checkmark.svg) no-repeat;
   height: 2.6rem;
   width: 2.6rem;
   background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .pricing__btn {

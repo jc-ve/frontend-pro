@@ -16,11 +16,30 @@
     <main>
       <figure class="pricing">
         <ul class="pricing__plan">
-          <li class="pricing__item">Basic</li>
-          <li class="pricing__item active">Standard</li>
-          <li class="pricing__item">Premium</li>
+          <li class="pricing__item" data-plan="1">Basic</li>
+          <li class="pricing__item active" data-plan="2">Standard</li>
+          <li class="pricing__item" data-plan="3">Premium</li>
         </ul>
-        <div class="pricing__body">
+        <div class="pricing__body pricing__body--1">
+          <p class="pricing__type">Basic</p>
+          <div class="pricing__price">
+            <p>Icon Sets</p>
+            <p>$60</p>
+          </div>
+          <p class="pricing__caption">
+            Up to 50 creative & professional icons + one color versions/themes
+          </p>
+          <ul class="pricing__features">
+            <li class="pricing__feature pricing__feature--included">
+              Included source files
+            </li>
+            <li class="pricing__feature pricing__feature--not-included">
+              Converted to responsive components
+            </li>
+          </ul>
+          <button class="pricing__btn">Add to cart</button>
+        </div>
+        <div class="pricing__body active pricing__body--2">
           <p class="pricing__type">Standard</p>
           <div class="pricing__price">
             <p>Icon Sets</p>
@@ -31,8 +50,31 @@
             per month
           </p>
           <ul class="pricing__features">
-            <li class="pricing__feature">Included source files</li>
-            <li class="pricing__feature">Converted to responsive components</li>
+            <li class="pricing__feature pricing__feature--included">
+              Included source files
+            </li>
+            <li class="pricing__feature pricing__feature--included">
+              Converted to responsive components
+            </li>
+          </ul>
+          <button class="pricing__btn">Add to cart</button>
+        </div>
+        <div class="pricing__body pricing__body--3">
+          <p class="pricing__type">Premium</p>
+          <div class="pricing__price">
+            <p>Icon Sets</p>
+            <p>$180</p>
+          </div>
+          <p class="pricing__caption">
+            Up to 200 creative & professional icons + four color versions/themes
+          </p>
+          <ul class="pricing__features">
+            <li class="pricing__feature pricing__feature--included">
+              Included source files
+            </li>
+            <li class="pricing__feature pricing__feature--included">
+              Converted to responsive components
+            </li>
           </ul>
           <button class="pricing__btn">Add to cart</button>
         </div>
