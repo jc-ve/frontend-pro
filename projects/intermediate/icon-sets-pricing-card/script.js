@@ -6,6 +6,7 @@ const itemsPricingPlan = document.querySelectorAll(".pricing__item");
 const showPlan = (e) => {
   const clicked = e.target.closest(".pricing__item");
   itemsPricingPlan.forEach((item) => item.classList.remove("active"));
+  clicked.classList.add("active");
 };
 
 listPricingPlan.addEventListener("click", showPlan);

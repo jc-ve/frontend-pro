@@ -1,5 +1,6 @@
 :root {
   --clr-green: #45a69a;
+  --clr-green-dark: #3e958b;
   --clr-purple: #4d46a5;
   --clr-purple-light: #5f59ae;
   --clr-black: #000;
@@ -22,13 +23,13 @@ html {
   font-size: 62.5%;
 }
 
-@media screen and (max-width: 46.875em) {
+@media screen and (max-width: 50em) {
   html {
     font-size: 56.25%;
   }
 }
 
-@media screen and (max-width: 34.375em) {
+@media screen and (max-width: 40.625em) {
   html {
     font-size: 50%;
   }
@@ -57,40 +58,41 @@ main {
   border-radius: 20px;
 }
 
-@media screen and (max-width: 34.375em) {
+/* @media screen and (max-width: 34.375em) {
   .pricing {
     padding: 6.1rem 1rem 15.1rem;
   }
-}
+} */
 
 .pricing__plan {
   list-style: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 7rem;
   padding: 1.4rem 5.1rem;
   border: 1px solid var(--clr-gray-light);
   border-radius: 20px;
   margin-bottom: 6.3rem;
 }
 
-@media screen and (max-width: 46.875em) {
+@media screen and (max-width: 50em) {
   .pricing__plan {
     gap: 3.5rem;
   }
 }
 
-@media screen and (max-width: 34.375em) {
+/* @media screen and (max-width: 34.375em) {
   .pricing__plan {
     padding: 0.8rem 3rem;
     margin-bottom: 5.2rem;
   }
-}
+} */
 
 .pricing__item {
   font-weight: 500;
   transition: color 0.3s ease;
+  padding: 2.6rem 5.2rem;
+  border-radius: 20px;
   cursor: pointer;
 }
 
@@ -101,9 +103,18 @@ main {
 .pricing__item.active {
   background-color: var(--clr-green);
   color: var(--clr-white);
-  padding: 2.6rem 5.2rem;
-  border-radius: 20px;
   box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.pricing__item.active:hover {
+  background-color: var(--clr-green-dark);
+}
+
+@media screen and (max-width: 50em) {
+  .pricing__item {
+    padding: 2.3rem 2.9rem;
+  }
 }
 
 .pricing__body {
@@ -111,11 +122,12 @@ main {
   margin: 0 auto;
 }
 
-@media screen and (max-width: 34.375em) {
+/* @media screen and (max-width: 34.375em) {
   .pricing__body {
-    max-width: 29.8rem;
+    max-width: 100%;
+    padding: 0 4.1rem;
   }
-}
+} */
 
 .pricing__type {
   font-weight: 700;
@@ -142,6 +154,7 @@ main {
 }
 
 .pricing__features {
+  list-style: none;
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -149,7 +162,18 @@ main {
 }
 
 .pricing__feature {
-  list-style-image: url("images/checkmark.svg");
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+.pricing__feature::before {
+  display: block;
+  content: "";
+  background: url(./images/checkmark.svg) no-repeat;
+  height: 2.6rem;
+  width: 2.6rem;
+  background-size: contain;
 }
 
 .pricing__btn {
