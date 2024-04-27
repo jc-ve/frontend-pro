@@ -1,0 +1,135 @@
+:root {
+  --clr-black: #191b1d;
+  --clr-white: #fff;
+  --clr-black-light: #22262c;
+  --clr-red: #bc1e4a;
+  --clr-red-light: #c3355c;
+  --clr-gray: #5c6268;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.6rem;
+  color: var(--clr-white);
+  background: var(--clr-black-light);
+}
+
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+/* TYPOGRAPHY */
+
+.heading--primary {
+  font-weight: 700;
+  font-size: 3.6rem;
+}
+
+/* UTILITIES */
+
+.u-margin-bottom-md {
+  margin-bottom: 3rem;
+}
+
+.u-margin-bottom-lg {
+  margin-bottom: 4rem;
+}
+
+.u-text-center {
+  text-align: center;
+}
+
+/* LAYOUT */
+
+.grid {
+  display: grid;
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* PLAN NAME */
+.plan {
+  max-width: 41.8rem;
+  margin: 0 auto;
+  text-align: center;
+  background-color: var(--clr-red);
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.plan__name {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+/* CARD */
+
+.card {
+  background-color: var(--clr-black-light);
+  border-radius: 10px;
+}
+
+.card__label {
+  font-weight: 600;
+  font-size: 2.5rem;
+  margin-bottom: 1.8rem;
+}
+
+.card__price {
+  font-weight: 700;
+  font-size: 5.6rem;
+}
+
+/* .card__item:not(:last-child) {
+} */
+
+/* BUTTONS */
+
+.btn:link,
+.btn:visited {
+  font-weight: 600;
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: var(--clr-white);
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.btn--outline:link,
+.btn--outline:visited {
+  box-shadow: 0 0 0 1px inset var(--clr-red);
+}
+
+.btn--outline:hover,
+.btn--outline:active {
+  background-color: var(--clr-red);
+}
+
+.btn--solid:link,
+.btn--solid:visited {
+  background-color: var(--clr-red);
+}
+
+.btn--solid:hover,
+.btn--solid:active {
+  background-color: var(--clr-red-light);
+}
