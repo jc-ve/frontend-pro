@@ -66,6 +66,8 @@ main {
 
 .pricing__plan {
   list-style: none;
+  max-width: 51.9rem;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -127,12 +129,11 @@ main {
   display: block;
 }
 
-@media screen and (max-width: 40.625em) {
+/* @media screen and (max-width: 40.625em) {
   .pricing__body {
-    max-width: 100%;
-    /* padding: 0 4.1rem; */
+    max-width: 29.8rem;
   }
-}
+} */
 
 @media screen and (max-width: 25em) {
   .pricing__body {
