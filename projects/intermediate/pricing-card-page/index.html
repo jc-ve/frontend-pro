@@ -10,7 +10,29 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <title>Frontend Pro &mdash;</title>
+    <title>Frontend Pro &mdash; Pricing Card Page</title>
   </head>
-  <body></body>
+  <body>
+    <header class="plan">
+      <p class="plan__caption">Your current plan:</p>
+      <p class="plan__name">Starter Trial - 500MAUs</p>
+    </header>
+    <main>
+      <h1 class="heading--primary u-margin-bottom-md">Choose a Plan</h1>
+      <div class="controls u-margin-bottom-lg"></div>
+      <div class="grid grid--3-cols">
+        <article class="card">
+          <div class="u-text-center">
+            <p class="card__label">Starter</p>
+            <p class="card__price">$19</p>
+          </div>
+          <ul class="card__list">
+            <li class="card__item">500 MAUs</li>
+            <li class="card__item">3 projects</li>
+          </ul>
+          <a href="#" class="btn btn--outline">Choose Plan</a>
+        </article>
+      </div>
+    </main>
+  </body>
 </html>
